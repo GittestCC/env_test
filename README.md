@@ -3,7 +3,7 @@
 A sample node microservice block for [kintohub](http://kintohub.com)
 
 
-
+  loltest
 
 # First time setup
 
