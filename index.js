@@ -13,15 +13,15 @@ app.get('/hello/:name', (req, res) => {
   // test with normal json logging
   console.log({
     kinto_request_id: requestId,
-    benName: 'BEN',
-    benValue: 'BEN IS GREAT'
+    benName: 'normal log',
+    benValue: 'normal log value'
   })
   // test with json stringify
   console.log(
     JSON.stringify({
       kinto_request_id: requestId,
-      benName: 'BEN',
-      benValue: 'BEN IS GREAT'
+      benName: 'stringify log',
+      benValue: 'stringify log value'
     })
   )
   console.log('All HEADERS:', req.headers)
