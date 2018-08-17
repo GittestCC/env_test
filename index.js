@@ -26,7 +26,7 @@ app.get('/hello/:name', (req, res) => {
   )
   console.log('All HEADERS:', req.headers)
   res.send({
-    message: `Hello requestId value: ${requestId}`
+    message: `Hellos requestId value: ${requestId}`
   })
 })
 
