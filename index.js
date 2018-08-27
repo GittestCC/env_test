@@ -10,23 +10,18 @@ const PORT = process.env.PORT || '8000'
  */
 app.get('/hello/:name', (req, res) => {
   const requestId = req.headers['kinto-request-id']
-  // test with normal json logging
-  console.log({
-    kinto_request_id: requestId,
-    benName: 'normal log',
-    benValue: 'normal log value'
-  })
+
   // test with json stringify
   console.log(
     JSON.stringify({
       kinto_request_id: requestId,
-      benName: 'stringify log',
-      benValue: 'stringify log value'
+      loggedLabel: 'Test Value',
+      loggedValue: 'Test Value'
     })
   )
-  console.log('All HEADERS:', req.headers)
   res.send({
-    message: `Hello requestId value: ${requestId}`
+    message: `Hello requestId value: ${requestId}`,
+    testEnv: process.env.TEST_ENV
   })
 })
 
